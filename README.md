@@ -1,12 +1,12 @@
 # Arduino-smart-home-switch
 A way to add 2 Sensirion SHT3x (RH/T) Digital Humidity Sensor(s) to Domoticz
 
-Note that HUM seems to be an int, and will truncate decimals https://github.com/domoticz/domoticz/blob/6fa3ed25990d46a70d0fc149d3ed5b7c44790a6b/main/EventSystem.cpp#L670
-This firmware will round HUMIDITY to the nearest whole number.
+[Note that HUM seems to be an int, and will truncate decimals](https://github.com/domoticz/domoticz/blob/6fa3ed25990d46a70d0fc149d3ed5b7c44790a6b/main/EventSystem.cpp#L670
+), this firmware will round HUMIDITY to the nearest whole number.
 
 # What you need
 - An [Domoticz](https://www.domoticz.com/) hub (and its IP ofc) to send data to
-- An dummy "Temp+hum" device in Domoticz and its IDX
+- An dummy ["Temp+hum"](https://www.domoticz.com/wiki/Dummy_for_virtual_Switches#Temperature.2Fhumidity) device in Domoticz and its IDX
 - [ESP32](https://dl.espressif.com/dl/package_esp32_index.json)
 - SHT3x sensor board
 
@@ -27,7 +27,7 @@ There a lot of blinking patterns, but I tried to list them all here
 
 # Soft settings
 There are multiple soft settings, these are settings that can be changed after the sketch has been uploaded, but are still saved so they can be restored after a reboot.
-The most up-to-date values can be found in the top of the [WiFiManagerBefore.h](Arduino/WifiManager.h) source file, and can only be set in [SHT.local/ip](http://SHT.local/ip).
+The most up-to-date values can be found in the top of the [WiFiManagerBefore.h](Arduino/WiFiManagerBefore.h) source file, and can only be set in [SHT.local/ip](http://SHT.local/ip).
 Note that the character " and TAB (EEPROM_Seperator) cannot be used, these will be replaced with ' and SPACE respectively. Leave black to skip updating these, use spaces ' ' to clear the values
 - **Domoticz IP** The Domoticz ip to connect to to sent the data to (and the log)
 - **Domoticz port** The Domoticz port to connect to on the given ip
