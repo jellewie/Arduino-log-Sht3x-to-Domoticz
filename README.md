@@ -1,4 +1,4 @@
-# Arduino-smart-home-switch
+# Arduino-log-Sht3x-to-Domoticz
 A way to add 2 Sensirion SHT3x (RH/T) Digital Humidity Sensor(s) to Domoticz
 
 [Note that HUM seems to be an int, and will truncate decimals](https://github.com/domoticz/domoticz/blob/6fa3ed25990d46a70d0fc149d3ed5b7c44790a6b/main/EventSystem.cpp#L670
